@@ -8,11 +8,12 @@ public class PlayerController : MonoBehaviour
     public static PlayerController instance { get; private set; }
 
     [Header("References")]
+
     [SerializeField] private InputHandler inputHandler;
 
     [Header("Settings")]
-    [SerializeField] private float speed = 5f;
 
+    [SerializeField] private float speed = 5f;
     [SerializeField] private float jump = 5f;
 
     Rigidbody2D rb;
