@@ -16,7 +16,6 @@ public class CountdownTimer : MonoBehaviour
         timerIsRunning = true;
     }
 
-    
     void Update()
     {
         Timer();
