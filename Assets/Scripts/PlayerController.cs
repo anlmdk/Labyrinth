@@ -19,8 +19,6 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D rb;
 
     private bool isFacing = true;
-    private bool isGrounded = true;  // Zýplama kontrolü için
-
 
     private void Awake()
     {
@@ -32,16 +30,14 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         Movement();
-        if (inputHandler.GetJump() && isGrounded)
-        {
-            Jump();
-        }
     }
     private void Movement()
     {
+        // Karakterin hareketi
+
         Vector2 input = inputHandler.GetMovementNormalized();
 
-        rb.velocity = new Vector2(input.x * speed, input.y);
+        rb.velocity = new Vector2(input.x * speed, input.y * speed);
 
         if (!isFacing && input.x > 0f)
         {
@@ -54,21 +50,11 @@ public class PlayerController : MonoBehaviour
     }
     public void Flip()
     {
+        // Karakterin saða sola yön olarak dönmesi
+
         isFacing = !isFacing;
         Vector3 _localScale = transform.localScale;
         _localScale.x *= -1f;
         transform.localScale = _localScale;
-    }
-
-    public void Jump()
-    {
-        rb.velocity = new Vector2(rb.velocity.x, jump);
-        isGrounded = false;
-        StartCoroutine(ResetJump());
-    }
-    private IEnumerator ResetJump()
-    {
-        yield return new WaitForSeconds(0.5f);  // Zýplama süresini ayarlayabilirsiniz
-        isGrounded = true;
     }
 }
