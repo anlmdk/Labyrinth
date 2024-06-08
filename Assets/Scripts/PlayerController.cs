@@ -8,15 +8,14 @@ public class PlayerController : MonoBehaviour
     public static PlayerController instance { get; private set; }
 
     [Header("References")]
-
     [SerializeField] private InputHandler inputHandler;
 
     [Header("Settings")]
-
     [SerializeField] private float speed = 5f;
-    [SerializeField] private float jump = 5f;
 
     Rigidbody2D rb;
+
+    Animator anim;
 
     private bool isFacing = true;
 
@@ -25,6 +24,7 @@ public class PlayerController : MonoBehaviour
         instance = this;
 
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
     void Update()
@@ -33,11 +33,13 @@ public class PlayerController : MonoBehaviour
     }
     private void Movement()
     {
-        // Karakterin hareketi
+        // Karakterin hareketi ve animasyonu
 
         Vector2 input = inputHandler.GetMovementNormalized();
 
         rb.velocity = new Vector2(input.x * speed, input.y * speed);
+
+        anim.SetFloat("Movement",rb.velocity.magnitude);
 
         if (!isFacing && input.x > 0f)
         {
