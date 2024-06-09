@@ -67,7 +67,7 @@ public class GameManager : MonoBehaviour
     }
     public void EndGame()
     {
-        if (gameTimer[0].timeRemaining > 0 || gameTimer[1].timeRemaining > 0 && key == 1)
+        if ((gameTimer[0].timeRemaining > 0 || gameTimer[1].timeRemaining > 0) && key == 1)
         {
             if (checkLevel)
             {
@@ -80,15 +80,20 @@ public class GameManager : MonoBehaviour
                 endGameText[1].text = "Next Level";
             }
         }
-        else if (gameTimer[0].timeRemaining < 0 || gameTimer[0].timeRemaining == 0 || gameTimer[1].timeRemaining < 0 || gameTimer[1].timeRemaining == 0)
+        else if (gameTimer[0].timeRemaining <= 0 || gameTimer[1].timeRemaining <= 0)
         {
-            Time.timeScale = 0;
+            checkLevel = true;
 
-            endGamePanel[0].SetActive(true);
-            endGamePanel[1].SetActive(true);
+            if (checkLevel)
+            {
+                Time.timeScale = 0;
 
-            endGameText[0].text = "Game Over";
-            endGameText[1].text = "Game Over";
+                endGamePanel[0].SetActive(true);
+                endGamePanel[1].SetActive(true);
+
+                endGameText[0].text = "Game Over";
+                endGameText[1].text = "Game Over";
+            }
         }
     }
 }
