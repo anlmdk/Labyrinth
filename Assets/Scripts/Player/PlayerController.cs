@@ -33,11 +33,13 @@ public class PlayerController : MonoBehaviour
     }
     private void Movement()
     {
-        // Karakterin hareketi ve animasyonu
+        // Karakterin hareketi
 
         Vector2 input = inputHandler.GetMovementNormalized();
 
         rb.velocity = new Vector2(input.x * speed, input.y * speed);
+
+        // KArakterin x ve y deki animasyonu ve hýza göre hareket animasyonu
 
         anim.SetFloat("Horizontal", rb.velocity.x);
         anim.SetFloat("Vertical", rb.velocity.y);

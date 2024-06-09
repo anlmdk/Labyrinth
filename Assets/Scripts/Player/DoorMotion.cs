@@ -13,6 +13,8 @@ public class DoorMotion : MonoBehaviour
 
     public void DoorInteractive()
     {
+        // Kapý görsellerini aktif etme veya deaktif etme
+
         if (GameManager.instance.checkKey is true)
         {
             door[0].SetActive(true);

@@ -10,6 +10,7 @@ public class OrientationHandler : MonoBehaviour
     void Start()
     {
         // Oyun baþladýðýnda telefonun yönüne göre ayarla
+
         UpdateOrientation();
     }
 
@@ -23,12 +24,14 @@ public class OrientationHandler : MonoBehaviour
         if (Input.deviceOrientation == DeviceOrientation.LandscapeLeft || Input.deviceOrientation == DeviceOrientation.LandscapeRight)
         {
             // Yatay mod
+
             portraitPanel.SetActive(false);
             landscapePanel.SetActive(true);
         }
         else if (Input.deviceOrientation == DeviceOrientation.Portrait || Input.deviceOrientation == DeviceOrientation.PortraitUpsideDown)
         {
             // Dikey mod
+
             portraitPanel.SetActive(true);
             landscapePanel.SetActive(false);
         }

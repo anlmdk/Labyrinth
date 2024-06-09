@@ -67,6 +67,8 @@ public class GameManager : MonoBehaviour
     }
     public void EndGame()
     {
+        // Yatay veya Dikey UI'daki zaman bittiðinde ve anahtar 1'e eþitse bölümü bitir
+
         if ((gameTimer[0].timeRemaining > 0 || gameTimer[1].timeRemaining > 0) && key == 1)
         {
             if (checkLevel)
@@ -80,6 +82,8 @@ public class GameManager : MonoBehaviour
                 endGameText[1].text = "Next Level";
             }
         }
+        // Yatay veya Dikey UI'daki zaman bittiðinde ve anahtar 1'e eþit deðilse bölümü bitirme
+
         else if (gameTimer[0].timeRemaining <= 0 || gameTimer[1].timeRemaining <= 0)
         {
             checkLevel = true;
