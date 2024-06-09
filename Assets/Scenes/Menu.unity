@@ -360,7 +360,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -480}
+  m_AnchoredPosition: {x: 0, y: -520}
   m_SizeDelta: {x: 275, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &423120247
@@ -606,7 +606,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5.39
+  orthographic size: 4.43
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1133,7 +1133,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\nMovement \n\nW-A-S-D\n\n Arrow Keys\n"
+  m_text: "\n-Movement-\n\nW-A-S-D\nor\n Arrow Keys\n\n-Touch Control-\n\nJoystick"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1731,7 +1731,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1252531686
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7182,9 +7182,9 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 493924860}
   - {fileID: 1798606809}
+  - {fileID: 1244844266}
+  - {fileID: 1820005901}
   - {fileID: 1790591516}
   - {fileID: 702495424}
   - {fileID: 1011747760}
   - {fileID: 124621593}
-  - {fileID: 1244844266}
-  - {fileID: 1820005901}
