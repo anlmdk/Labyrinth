@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Default Local Group
+  m_EditorClassIdentifier: 
+  m_GroupName: Default Local Group
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 281b240f61a043d4fa8e23c861975b41
+  m_SerializeEntries:
+  - m_GUID: 75693b922a141ee41853f3994fff3a6b
+    m_Address: Assets/Sprites/Character
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Character
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5da6200efe650bc4d8803252bf13ae16
+    m_Address: Assets/Sprites/Collectible
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Collectible
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8935e29f7b7d1274d9b186cb94d23bd3
+    m_Address: Assets/Sprites/Environment
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Environment
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fbe087c4fc8d5db4f811cf718ea1c765
+    m_Address: Assets/Sprites/Tile
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Tile
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 195209104a21b5f43bef563b32090831
+    m_Address: Assets/Sprites/UI
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UI
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9a73e3e5e9dd841afbfedc11611c139c
+    m_Address: Assets/Music
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Music
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 1408445e3844cb640bcf1a4a66aa9355, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 54f63d292a6409a4b91f235eb075837a, type: 2}
+    - {fileID: 11400000, guid: 730dc953d1aeab649a11bae3cb150cd1, type: 2}
