@@ -6,12 +6,14 @@ public class Collector : MonoBehaviour
 {
     private string COIN = "Coin";
     private string KEY = "Key";
+    private string FINISH = "Finish";
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag(COIN))
         {
             // Nesneyi yok et puan ekle 
+
             Debug.Log("Coin ile çarpýþma tespit edildi.");
 
             Destroy(collision.gameObject);
@@ -20,14 +22,15 @@ public class Collector : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag(KEY))
         {
-            // Nesneyi yok et puan ekle 
+            // Nesneyi yok et kapýyý aç
+
             Debug.Log("Key ile çarpýþma tespit edildi.");
 
             Destroy(collision.gameObject);
 
             GameManager.instance.CollectKey();
         }
-        else if (collision.gameObject.CompareTag("Finish"))
+        else if (collision.gameObject.CompareTag(FINISH))
         {
             GameManager.instance.checkLevel = true;
 

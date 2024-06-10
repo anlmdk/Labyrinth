@@ -20,6 +20,7 @@ public class CountdownTimer : MonoBehaviour
     {
         Timer();
     }
+
     public void Timer() 
     {
         if (timerIsRunning)
@@ -38,6 +39,7 @@ public class CountdownTimer : MonoBehaviour
             }
         }
     }
+
     public void DisplayTime(float timeToDisplay)
     {
         // Süre 0'dan az ise süreyi 0'a eþitle

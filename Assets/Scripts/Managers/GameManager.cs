@@ -41,9 +41,8 @@ public class GameManager : MonoBehaviour
         coin = 0;
         key = 0;
         Time.timeScale = 1;
-    }
+    }  
 
-    
     void Update()
     {
         EndGame();
@@ -56,6 +55,7 @@ public class GameManager : MonoBehaviour
         collectCoinText[0].text = coin.ToString();
         collectCoinText[1].text = coin.ToString();
     }
+
     public void CollectKey()
     {
         // Anahtar topladýðýnda ui'daki anahtar sayýsýný güncelle
@@ -65,14 +65,17 @@ public class GameManager : MonoBehaviour
 
         checkKey = true;
     }
+
     public void EndGame()
     {
         // Yatay veya Dikey UI'daki zaman bittiðinde ve anahtar 1'e eþitse bölümü bitir
 
-        if ((gameTimer[0].timeRemaining > 0 || gameTimer[1].timeRemaining > 0) && key == 1)
+        if (gameTimer[0].timeRemaining > 0 || gameTimer[1].timeRemaining > 0)
         {
             if (checkLevel)
             {
+                Debug.Log(checkLevel);
+                
                 Time.timeScale = 0;
 
                 endGamePanel[0].SetActive(true);
@@ -82,14 +85,11 @@ public class GameManager : MonoBehaviour
                 endGameText[1].text = "Next Level";
             }
         }
-        // Yatay veya Dikey UI'daki zaman bittiðinde ve anahtar 1'e eþit deðilse bölümü bitirme
+        // Yatay veya Dikey UI'daki zaman bittiðinde karakter bölümü tamamlamamýþsa bölümü bitir
 
-        else if (gameTimer[0].timeRemaining <= 0 || gameTimer[1].timeRemaining <= 0)
+        if (gameTimer[0].timeRemaining <= 0 || gameTimer[1].timeRemaining <= 0)
         {
-            checkLevel = true;
-
-            if (checkLevel)
-            {
+                checkLevel = true;
                 Time.timeScale = 0;
 
                 endGamePanel[0].SetActive(true);
@@ -97,7 +97,6 @@ public class GameManager : MonoBehaviour
 
                 endGameText[0].text = "Game Over";
                 endGameText[1].text = "Game Over";
-            }
         }
     }
 }

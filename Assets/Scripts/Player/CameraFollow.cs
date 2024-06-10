@@ -17,10 +17,13 @@ public class CameraFollow : MonoBehaviour
 
     void LateUpdate()
     {
+        // Hedefi takip etme
+
         targetedPosition = targetPlayer.transform.position + cameraOffset;
         transform.position = Vector3.SmoothDamp(transform.position, targetedPosition, ref veolcity, smoothTime);
 
         // Kamera pozisyonunu sýnýrlar içinde tut
+
         float clampedX = Mathf.Clamp(transform.position.x, minX, maxX);
         float clampedY = Mathf.Clamp(transform.position.y, minY, maxY);
         transform.position = new Vector3(clampedX, clampedY, transform.position.z);

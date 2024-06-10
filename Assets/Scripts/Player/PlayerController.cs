@@ -31,6 +31,7 @@ public class PlayerController : MonoBehaviour
     {
         Movement();
     }
+
     private void Movement()
     {
         // Karakterin hareketi
@@ -39,7 +40,7 @@ public class PlayerController : MonoBehaviour
 
         rb.velocity = new Vector2(input.x * speed, input.y * speed);
 
-        // KArakterin x ve y deki animasyonu ve hýza göre hareket animasyonu
+        // Karakterin x ve y deki hareketi ve hýza göre hareket animasyonu
 
         anim.SetFloat("Horizontal", rb.velocity.x);
         anim.SetFloat("Vertical", rb.velocity.y);

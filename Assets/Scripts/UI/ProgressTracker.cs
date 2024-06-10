@@ -14,6 +14,7 @@ public class ProgressTracker : MonoBehaviour
     {
         RoadCompletedOnSlider();
     }
+
     public void RoadCompletedOnSlider()
     {
         // Karakterin baþlangýç noktasýndan bitiþ noktasýna olan ilerlemesini hesapla
