@@ -42,13 +42,14 @@ public class CountdownTimer : MonoBehaviour
 
     public void DisplayTime(float timeToDisplay)
     {
-        // Süre 0'dan az ise süreyi 0'a eþitle
+        // Sure 0'dan az ise sureyi 0'a esitle
+
         if (timeToDisplay < 0)
         {
             timeToDisplay = 0;
         }
 
-        // Dakika ve saniye olarak ayarla ve ekranda göster
+        // Dakika ve saniye olarak ayarla ve ekranda goster
 
         float minutes = Mathf.FloorToInt(timeToDisplay / 60);
         float seconds = Mathf.FloorToInt(timeToDisplay % 60);

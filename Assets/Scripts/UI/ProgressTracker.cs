@@ -17,16 +17,16 @@ public class ProgressTracker : MonoBehaviour
 
     public void RoadCompletedOnSlider()
     {
-        // Karakterin baþlangýç noktasýndan bitiþ noktasýna olan ilerlemesini hesapla
+        // Karakterin baslangic noktasindan bitis noktasina olan ilerlemesini hesapla
 
         float totalDistance = Vector3.Distance(startPoint.position, endPoint.position);
         float currentDistance = Vector3.Distance(startPoint.position, character.position);
 
-        // Ýlerlemeyi 0 ile 1 arasýnda normalize et
+        // Ilerlemeyi 0 ile 1 arasinda normalize et
 
         float progress = Mathf.Clamp01(currentDistance / totalDistance);
 
-        // Slider'ý güncelle
+        // Slider'i guncelle
 
         progressSlider[0].value = progress;
         progressSlider[1].value = progress;

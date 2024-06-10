@@ -9,7 +9,7 @@ public class OrientationHandler : MonoBehaviour
 
     void Start()
     {
-        // Oyun baþladýðýnda telefonun yönüne göre ayarla
+        // Oyun basladiginda telefonun yonune gore ayarla
 
         UpdateOrientation();
     }

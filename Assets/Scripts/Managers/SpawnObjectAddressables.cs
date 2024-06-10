@@ -15,7 +15,7 @@ public class SpawnObjectAddressables : MonoBehaviour
 
     public void AddressablesObjects()
     {
-        // Klasörleri ve içindeki objeleri addressable'a ekleme 
+        // Klasorleri ve icindeki objeleri addressable'a ekleme 
         
         Addressables.LoadAssetsAsync<Sprite>(assetLabelReference, (sprite) => {
 

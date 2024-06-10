@@ -5,20 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour
 {
-    // Mevcut bölümü ismiyle yükleme
+    // Mevcut bolumu ismiyle yukleme
     public void LoadLevel(string levelName)
     {
         SceneManager.LoadScene(levelName);
     }
 
-    // Sonraki bölümü yükleme
+    // Sonraki bolumu yukleme
     public void LoadNextLevel()
     {
         int levelIndex = SceneManager.GetActiveScene().buildIndex + 1;
         SceneManager.LoadScene(levelIndex);
     }
 
-    // Önceki bölümü yükleme
+    // Onceki bolumu yukleme
     public void LoadBeforeLevel()
     {
         Time.timeScale = 1;
@@ -27,14 +27,14 @@ public class SceneController : MonoBehaviour
         SceneManager.LoadScene(levelIndex);
     }
 
-    // Bölümü yeniden oynama
+    // Bolumu yeniden oynama
     public void RestartLevel()
     {
         int levelIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(levelIndex);
     }
 
-    // Oyundan çýkýþ saðlama
+    // Oyundan cikis saglama
     public void Quit()
     {
         Application.Quit();

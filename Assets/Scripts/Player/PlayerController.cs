@@ -40,7 +40,7 @@ public class PlayerController : MonoBehaviour
 
         rb.velocity = new Vector2(input.x * speed, input.y * speed);
 
-        // Karakterin x ve y deki hareketi ve hýza göre hareket animasyonu
+        // Karakterin x ve y'deki hareketi ve hiza gore hareket animasyonu
 
         anim.SetFloat("Horizontal", rb.velocity.x);
         anim.SetFloat("Vertical", rb.velocity.y);
@@ -57,7 +57,7 @@ public class PlayerController : MonoBehaviour
     }
     public void Flip()
     {
-        // Karakterin saða sola yön olarak dönmesi
+        // Karakterin saga sola yon olarak donmesi
 
         isFacing = !isFacing;
         Vector3 _localScale = transform.localScale;

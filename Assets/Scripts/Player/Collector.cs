@@ -14,7 +14,7 @@ public class Collector : MonoBehaviour
         {
             // Nesneyi yok et puan ekle 
 
-            Debug.Log("Coin ile çarpýþma tespit edildi.");
+            Debug.Log("Coin ile carpisma tespit edildi.");
 
             Destroy(collision.gameObject);
 
@@ -22,9 +22,9 @@ public class Collector : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag(KEY))
         {
-            // Nesneyi yok et kapýyý aç
+            // Nesneyi yok et kapiyi ac
 
-            Debug.Log("Key ile çarpýþma tespit edildi.");
+            Debug.Log("Key ile carpisma tespit edildi.");
 
             Destroy(collision.gameObject);
 

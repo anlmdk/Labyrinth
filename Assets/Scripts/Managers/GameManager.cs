@@ -50,7 +50,7 @@ public class GameManager : MonoBehaviour
 
     public void CollectCoin()
     {
-        // Altýn topladýðýnda ui'daki altýn sayýsýný güncelle
+        // Altin topladiginda ui'daki altin sayisini guncelle
         coin++;
         collectCoinText[0].text = coin.ToString();
         collectCoinText[1].text = coin.ToString();
@@ -58,7 +58,7 @@ public class GameManager : MonoBehaviour
 
     public void CollectKey()
     {
-        // Anahtar topladýðýnda ui'daki anahtar sayýsýný güncelle
+        // Anahtar topladiginda ui'daki anahtar sayisini guncelle
         key++;
         collectKeyText[0].text = key.ToString();
         collectKeyText[1].text = key.ToString();
@@ -68,7 +68,7 @@ public class GameManager : MonoBehaviour
 
     public void EndGame()
     {
-        // Yatay veya Dikey UI'daki zaman bittiðinde ve anahtar 1'e eþitse bölümü bitir
+        // Yatay veya Dikey UI'daki zaman bittiginde ve anahtar 1'e esitse bolumu bitir
 
         if (gameTimer[0].timeRemaining > 0 || gameTimer[1].timeRemaining > 0)
         {
@@ -85,7 +85,7 @@ public class GameManager : MonoBehaviour
                 endGameText[1].text = "Next Level";
             }
         }
-        // Yatay veya Dikey UI'daki zaman bittiðinde karakter bölümü tamamlamamýþsa bölümü bitir
+        // Yatay veya Dikey UI'daki zaman bittiginde karakter bolumu tamamlamamissa bolumu bitir
 
         if (gameTimer[0].timeRemaining <= 0 || gameTimer[1].timeRemaining <= 0)
         {

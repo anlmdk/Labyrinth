@@ -13,7 +13,7 @@ public class DoorMotion : MonoBehaviour
 
     public void DoorInteractive()
     {
-        // Kapý görsellerini aktif etme veya deaktif etme
+        // Kapi gorsellerini aktif etme veya deaktif etme
 
         if (GameManager.instance.checkKey is true)
         {

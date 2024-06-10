@@ -6,7 +6,7 @@ public class ShowInputOnMobile : MonoBehaviour
 {
     void Start()
     {
-        // Joystick'i sadece mobile platformda göster
+        // Joystick'i sadece mobile platformda goster
 
         gameObject.SetActive(Application.isMobilePlatform);    
     }

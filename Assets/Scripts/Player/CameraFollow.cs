@@ -22,7 +22,7 @@ public class CameraFollow : MonoBehaviour
         targetedPosition = targetPlayer.transform.position + cameraOffset;
         transform.position = Vector3.SmoothDamp(transform.position, targetedPosition, ref veolcity, smoothTime);
 
-        // Kamera pozisyonunu sýnýrlar içinde tut
+        // Kamera pozisyonunu sinirlar icinde tutma
 
         float clampedX = Mathf.Clamp(transform.position.x, minX, maxX);
         float clampedY = Mathf.Clamp(transform.position.y, minY, maxY);
